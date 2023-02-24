@@ -1,6 +1,6 @@
 import http from 'k6/http';
 
-import { check, sleep } from 'k6';
+import {check} from 'k6';
 
 const serviceBaseUrl = 'http://localhost:8089'
 
@@ -37,7 +37,5 @@ export const options = {
     check(responseAuthen, { 'status was 200': (r) => r.status == 200 });
 
     check(responseCreateNewBlog, { 'status was 200': (r) => r.status == 200 });
-  
-    sleep(1);
   
   }
