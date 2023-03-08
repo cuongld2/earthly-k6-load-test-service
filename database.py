@@ -5,7 +5,7 @@ import os
 
 
 USER = os.getenv('DB_USER')
-PASSWORD = os.environ.get('DB_PASSWORD')
+PASSWORD = os.getenv('DB_PASSWORD')
 
 SQLALCHEMY_DATABASE_URL = (f"mysql+mysqlconnector://{USER}:{PASSWORD}@localhost:3306/blogFastAPI")
 
